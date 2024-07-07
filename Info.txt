@@ -1,0 +1,9 @@
+NextJS/TS
+Shadcn
+kinde
+neo4j - graph database
+(users are nodes and when they are matched its called relationship)
+neo4j driver orm on npm
+server-only
+
+aISMuOaGWgz_poe3ThQOkT8Yrh4oqzhe9vv8GbDiJ-8
