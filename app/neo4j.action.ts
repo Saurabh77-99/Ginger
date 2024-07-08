@@ -38,7 +38,8 @@ export const neo4jSwipe = async(
 )=>{
     const type = swipe === "left" ? "DISLIKE":"LIKE";
     await driver.executeQuery(
-        `MATCH (cu: User {applicationId: $id}),(ou: User {applicationId: $userId}), CREATE (cu)-[:${type}]->(ou)`,{
+        `MATCH (cu: User {applicationId: $id}),(ou: User {applicationId: $userId}) CREATE (cu)-[:${type}]->(ou)`,
+        {
             id,
             userId
         }
@@ -46,7 +47,7 @@ export const neo4jSwipe = async(
 
     if(type === "LIKE"){
         const result = await driver.executeQuery(
-            `MATCH (cu: User {applicationId: $id}),(ou: User {applicationId: $userId}), WHERE (ou)-[:LIKE]->(cu) RETURN ou as match`,
+            `MATCH (cu: User {applicationId: $id}),(ou: User {applicationId: $userId}) WHERE (ou)-[:LIKE]->(cu) RETURN ou as match`,
             {
                 id,
                 userId
