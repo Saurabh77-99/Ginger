@@ -1,10 +1,10 @@
 "use client";
 
+import * as React from 'react';
 import { Neo4JUser } from '@/types';
 import TinderCard from 'react-tinder-card';
-import * as React from 'react';
-import { Card, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { neo4jSwipe } from '@/app/neo4j.action';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface HomepageClientComponentProps{
     currentUser : Neo4JUser;

@@ -1,7 +1,7 @@
 import {getKindeServerSession} from '@kinde-oss/kinde-auth-nextjs/server';
 import { redirect } from 'next/navigation';
 import { getUserByID, getUsersWithNoConnection } from './neo4j.action';
-import HomepageClientComponent from '@/components/Home';
+import HomepageClientComponent from './components/Home';
 
 export default async function Home() {
   const {isAuthenticated,getUser} = getKindeServerSession()
