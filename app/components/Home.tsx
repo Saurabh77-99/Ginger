@@ -39,7 +39,7 @@ const HomepageClientComponent: React.FC<HomepageClientComponentProps> = ({
                 <CardTitle>
                 {user.firstname} {user.lastname}
                 </CardTitle>
-                <CardDescription>{}user.email</CardDescription>
+                <CardDescription>{user.email}</CardDescription>
             </CardHeader>
             </Card>
             </TinderCard>
